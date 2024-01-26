@@ -30,7 +30,7 @@ const App = (props) => {
   }, []);
 
   const deleteMovie = (id) => {
-    // Make a DELETE request using Axios
+    // Make a DELETE request using Axios - axios request is in the movie.js file and the request below is to filter through the movies by the id, so that it will only delete the one selected by the id
     // On success update the movies list in state
     // and navigate the user to /movies
     // Hand this function down to the correct component
