@@ -67,7 +67,7 @@ const Movie = (props) => {
             <section>
               <span className="m-2 btn btn-dark">Favorite</span>
               <Link to={`/movies/edit/${movie.id}`} className="m-2 btn btn-success">Edit</Link>
-              <span className="delete"><input onClick={handleDeleteClick}type="button" className="m-2 btn btn-danger" value="Delete" /></span>
+              <span onClick={handleDeleteClick} className="delete"><input type="button" className="m-2 btn btn-danger" value="Delete" /></span>
             </section>
           </div>
         </div>
