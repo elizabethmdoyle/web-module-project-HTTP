@@ -35,6 +35,8 @@ const App = (props) => {
     // and navigate the user to /movies
     // Hand this function down to the correct component
 
+    //setMovies(movies.filter(m=>(m.id !== id)))
+
     // axios.delete('http://localhost:9000/api/delete)
     //      .then(res => console.log(res))
     //      .catch(err => console.log(err))
@@ -56,7 +58,7 @@ const App = (props) => {
           <FavoriteMovieList favoriteMovies={favoriteMovies} />
 
           <Routes>
-            <Route path="movies/edit/:id" element={<EditMovieForm movies={movies} />}  />
+            <Route path="movies/edit/:id" element={<EditMovieForm movies={movies} setMovies={setMovies} />}  />
 
             <Route path="movies/:id" element={<Movie movies={movies} />} />
 

@@ -30,7 +30,7 @@ const EditMovieForm = (props) => {
   
   //useEffect is used whenever the component first mounts
   useEffect(() => {
-    axios.get(`http://localhost:9000/api/movies/${id}`, movie)
+    axios.get(`http://localhost:9000/api/movies/${id}`)
         .then(res => {
           setMovie(res.data)
         })
@@ -45,9 +45,10 @@ const EditMovieForm = (props) => {
     // On success, set the updated movies in state
     // and also navigate the app to the updated movie path
 
-    axios.put(`http://localhost:9000/api/movies/${id}`)
+    axios.put(`http://localhost:9000/api/movies/${id}`, movie)
         .then(res => {
-          console.log(res)
+          setMovies(res.data);
+          navigate(`/movies/${id}`)
         })
         .catch(err => {
           console.log(err)
